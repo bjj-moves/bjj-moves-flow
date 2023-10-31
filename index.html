@@ -85,8 +85,8 @@
                 node.attr("cx", d => d.x)
                     .attr("cy", d => d.y);
             
-                nodeText.attr("x", d => d.x)
-                    .attr("y", d => d.y);
+                nodeText.attr("dx", d => d.x)
+                    .attr("dy", d => d.y);
             
                 linkText.attr("x", d => (d.source.x + d.target.x) / 2)
                     .attr("y", d => (d.source.y + d.target.y) / 2);
