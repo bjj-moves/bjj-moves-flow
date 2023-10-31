@@ -30,6 +30,11 @@
                     value: d["Escape/Transition"]
                 });
             });
+                // Initialize node positions to random values within the SVG dimensions
+            nodes.forEach(d => {
+                d.x = Math.random() * width;
+                d.y = Math.random() * height;
+            });
 
             const simulation = d3.forceSimulation(nodes)
                 .force("link", d3.forceLink(links).id(d => d.id).distance(100))
